@@ -38,6 +38,10 @@ app.post('/profilePicture', upload.single('profilePicture'), (req, res) => {
     fileHandler.profilePicture(req, res);
 });
 
+
+app.get('/', (req,res) => {
+    return res.json("Chriscord API up and running!");
+})
 app.post('/image', upload.single('image'), (req, res) => {
     fileHandler.saveImage(req, res);
 });
